@@ -24,6 +24,7 @@ do
                          answer=$qip
                  elif [ "$q" = "reboot" ]; then
                          if [ "$rebootpassword" = "$(echo "$line" | cut -d "/" -f3 | cut -d " " -f1)" ]; then
+                                answer="Rebooting now"
                                 reboot now
                          else
                                 answer="Wrong Password"
